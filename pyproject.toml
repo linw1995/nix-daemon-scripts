@@ -1,0 +1,28 @@
+[project]
+name = "nix-daemon-scripts"
+version = {use_scm = true}
+description = "scripts related with nix-daemon"
+authors = [
+    {name = "林玮 (Jade Lin)", email = "linw1995@icloud.com"},
+]
+dependencies = [
+    "click~=7.1",
+    
+    
+]
+requires-python = ">=3.9"
+dynamic = ["version"]
+license = {text = "MIT"}
+
+[project.urls]
+homepage = "https://github.com/linw1995/nix-daemon-scripts"
+
+[project.scripts]
+config_nix_daemon_with_proxy = "config_nix_daemon_with_proxy:config_proxy"
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
